@@ -1,4 +1,6 @@
 #!/bin/bash
+# Get a process list overview of running processes divided into unique processes
+# This works well if you need to know if some process type is generating a lot of child processes
 PROCSARRAY=( $(ls /proc | egrep '[0-9]') )
 COUNT=0
 printf "%-20s\n" "Number of PROCS: ${#PROCSARRAY[@]}"
